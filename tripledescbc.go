@@ -1,4 +1,4 @@
-package main
+package goEncrypt
 
 import (
 	"crypto/cipher"
@@ -6,6 +6,8 @@ import (
 	"log"
 	"runtime"
 )
+
+
 
 /*
 @Time : 2018/11/1 22:50 
