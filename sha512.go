@@ -1,4 +1,4 @@
-package goEncrypt
+package main
 
 import (
 	"crypto/sha512"

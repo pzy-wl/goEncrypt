@@ -1,4 +1,4 @@
-package goEncrypt
+package main
 
 import (
 	"crypto/ecdsa"
@@ -20,15 +20,15 @@ func init(){
 	log.SetFlags(log.Ldate|log.Lshortfile)
 }
 
-func GetEccKey()error{
+func GetEccKey()([]byte,[]byte ,error){
 	privateKey, err := ecdsa.GenerateKey(elliptic.P256(), rand.Reader)
 	if err!=nil{
-		return err
+		return nil, nil,err
 	}
 
 	x509PrivateKey, err := x509.MarshalECPrivateKey(privateKey)
 	if err!=nil{
-		return err
+		return nil, nil,err
 	}
 
 	block := pem.Block{
@@ -37,16 +37,16 @@ func GetEccKey()error{
 	}
 	file, err := os.Create(eccPrivateFileName)
 	if err!=nil{
-		return err
+		return nil, nil,err
 	}
 	defer file.Close()
 	if err=pem.Encode(file, &block);err!=nil{
-		return err
+		return nil, nil,err
 	}
 
 	x509PublicKey, err := x509.MarshalPKIXPublicKey(&privateKey.PublicKey)
 	if err!=nil {
-		return err
+		return nil, nil,err
 	}
 	publicBlock := pem.Block{
 		Type:  eccPublicKeyPrefix,
@@ -54,11 +54,11 @@ func GetEccKey()error{
 	}
 	publicFile, err := os.Create(eccPublishFileName)
 	if err!=nil {
-		return err
+		return nil, nil,err
 	}
 	defer publicFile.Close()
 	if err=pem.Encode(publicFile,&publicBlock);err!=nil{
-		return err
+		return nil, nil,err
 	}
-	return nil
+	return pem.EncodeToMemory(&publicBlock),pem.EncodeToMemory(&block),nil
 }
