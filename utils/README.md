@@ -38,7 +38,7 @@ func main(){
 }
 ```
 
-![](image/1.png)
+![](../image/1.png)
 
 ## 1.2三重DES的快速使用
 
@@ -64,7 +64,7 @@ func main(){
 }
 ```
 
-![](image/2.png)
+![](../image/2.png)
 
 ## 2.1AES的CBC模式的快速使用
 
@@ -90,7 +90,7 @@ func main(){
 }
 ```
 
-![](image/3.png)
+![](../image/3.png)
 
 ## 2.1AES的CTR模式的快速使用
 
@@ -116,7 +116,7 @@ func main(){
 }
 ```
 
-![](image/4.png)
+![](../image/4.png)
 
 ## 3. 非对称加密RSA的快速使用
 
@@ -132,11 +132,11 @@ func main() {
 }
 ```
 
-![](image/7.png)
+![](../image/7.png)
 
-![](image/5.png)
+![](../image/5.png)
 
-![](image/6.png)
+![](../image/6.png)
 
 #### 3.2 RSA加解密使用（公钥加密私钥解密）
 
@@ -202,7 +202,7 @@ func main() {
 }
 ```
 
-![](image/8.png)
+![](../image/8.png)
 
 > **RSA在非对称加密中使用比较广泛**
 >
@@ -272,7 +272,7 @@ func main() {
 }
 ```
 
-![](image/11.png)
+![](../image/11.png)
 
 ## 4.ECC椭圆曲线应用
 
@@ -288,11 +288,11 @@ func main(){
 }
 ```
 
-![](image/12.png)
+![](../image/12.png)
 
-![](image/13.png)
+![](../image/13.png)
 
-![](image/14.png)
+![](../image/14.png)
 
 #### 4.2 ECC数字签名快速使用实现
 
@@ -330,7 +330,7 @@ func main() {
 }
 ```
 
-![](image/15.png)
+![](../image/15.png)
 
 > ECC椭圆曲线技术应用广泛，目前我国居民身份证数字签名技术就是使用的ECC，虚拟货币比特币和以太坊中也使用了ECC技术,ECC加密一般不使用。
 
@@ -379,7 +379,7 @@ func main() {
 }
 ```
 
-![](image/16.png)
+![](../image/16.png)
 
 ## 5.附带的哈希函数sha256和sha512使用非常简单
 
@@ -393,7 +393,7 @@ func main() {
 }
 ```
 
-![](image/9.png)
+![](../image/9.png)
 
 #### 5.2 sha512的快速使用
 

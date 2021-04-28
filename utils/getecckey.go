@@ -1,4 +1,4 @@
-package goEncrypt
+package utils
 
 import (
 	"crypto/ecdsa"
@@ -25,7 +25,6 @@ func GetEccKey()([]byte,[]byte ,error){
 	if err!=nil{
 		return nil, nil,err
 	}
-
 	x509PrivateKey, err := x509.MarshalECPrivateKey(privateKey)
 	if err!=nil{
 		return nil, nil,err

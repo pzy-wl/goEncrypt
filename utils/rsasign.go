@@ -1,4 +1,4 @@
-package goEncrypt
+package utils
 
 import (
 	"encoding/pem"
